@@ -1,59 +1,104 @@
-# Frontend
+# Naeam Blog
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.4.
+**Naeam Blog** هو موقع ويب حديث يهدف إلى عرض مقالات تقنية وملهمة، بالإضافة إلى تقديم نبذة عن أعمالي وخدماتي في مجال تطوير البرمجيات والاستشارات التقنية.
 
-## Development server
+---
 
-To start a local development server, run:
+## تفاصيل ما تم إنجازه في الواجهة الأمامية (Frontend)
 
-```bash
-ng serve
+### 1. إعداد المشروع
+- إنشاء مشروع Angular جديد باسم `naeam blog`.
+- إضافة Tailwind CSS و DaisyUI لدعم تصميم عصري ومتجاوب.
+- تهيئة ملفات الأنماط (`styles.css`) لدعم الوضع الليلي والنهاري.
+
+### 2. بناء الهيكل الأساسي للمجلدات
+- تنظيم مجلد `src/app/components` ليحتوي على مكونات منفصلة:
+  - **navbar**: شريط تنقل علوي.
+  - **footer**: تذييل الموقع وروابط التواصل.
+  - **home**: الصفحة الرئيسية لعرض المقالات.
+  - **theme-toggle**: زر لتغيير الثيم (فاتح/داكن).
+  - **article-details**: صفحة تفاصيل المقال.
+
+### 3. تطوير الصفحة الرئيسية (Home)
+- تصميم واجهة تعرض آخر المقالات بشكل بطاقات (Cards) جذابة.
+- إضافة صور افتراضية لكل مقالة.
+- جعل الكروت متجاوبة مع جميع الشاشات باستخدام Grid من Tailwind.
+- ربط كل كارت بمقال ديناميكي، بحيث عند الضغط عليه ينتقل المستخدم لصفحة تفاصيل المقال.
+
+### 4. صفحة تفاصيل المقال (Article Details)
+- بناء صفحة تفاصيل ديناميكية لكل مقال بناءً على الـ id.
+- تقسيم محتوى المقال إلى أقسام (عناوين فرعية، فقرات، قوائم) ليظهر بشكل منسق وجذاب.
+- دعم عرض المقالات العربية بشكل سليم مع تنسيقات مريحة للعين.
+- إضافة زر للعودة للصفحة الرئيسية.
+
+### 5. تطوير شريط التنقل (Navbar)
+- إضافة روابط تنقل بين الصفحات (الرئيسية، الأعمال، التواصل).
+- دعم الوضع الليلي والنهاري من خلال زر مخصص.
+
+### 6. تطوير التذييل (Footer)
+- إضافة روابط تواصل اجتماعي (GitHub، LinkedIn، البريد الإلكتروني).
+- تصميم متجاوب ويدعم الوضع الليلي.
+
+### 7. دعم الوضع الليلي والنهاري
+- تفعيل الوضع الليلي والنهاري في جميع أجزاء الموقع.
+- استخدام DaisyUI وTailwind لتغيير الألوان تلقائياً حسب الثيم.
+
+### 8. تحسين تجربة المستخدم
+- جعل جميع العناصر متجاوبة (Responsive) وتعمل بكفاءة على الجوال والكمبيوتر.
+- استخدام خطوط وألوان مريحة للعين.
+
+### 9. تنظيم التوجيه (Routing)
+- إعداد ملفات التوجيه (`app.routes.ts`) لسهولة الانتقال بين الصفحات.
+- دعم التوجيه الديناميكي لصفحات تفاصيل المقالات.
+
+---
+
+## ملاحظات حول النسخة الحالية
+
+- هذه النسخة **نسخة مبدئية** (Prototype) للعرض والتجربة فقط.
+- تم العمل على المشروع على مرحلتين:
+  - من يوم **1 أغسطس حتى 6 أغسطس** تم بناء الهيكل الأساسي والتصميم.
+  - من يوم **7 أغسطس بعد الظهر حتى 8 أغسطس مع أذان الفجر** تم إنهاء النسخة المبدئية بالكامل.
+- سيتم تطوير وتحسين الموقع بشكل مستمر في الإصدارات القادمة.
+
+---
+
+## المميزات الحالية
+
+- عرض المقالات بواجهة جذابة مع دعم المقالات العربية.
+- صفحة تفاصيل ديناميكية لكل مقال.
+- شريط تنقل وتذييل متكاملين.
+- دعم الوضع الليلي والنهاري.
+- تصميم متجاوب بالكامل.
+- بنية مشروع منظمة وسهلة التوسعة.
+
+---
+
+## التقنيات المستخدمة
+
+- **Angular 19**
+- **Tailwind CSS** و **DaisyUI**
+- **TypeScript**
+
+---
+
+## طريقة التشغيل
+
+```sh
+cd frontend
+npm install
+npm start
 ```
+ثم افتح المتصفح على [http://localhost:4200](http://localhost:4200)
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## تواصل معي
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- البريد الإلكتروني: mnaeam10@gmail.com
+- [GitHub](https://github.com/Mostafanaeam)
+- [LinkedIn](https://www.linkedin.com/in/mostafa-naeam/)
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+> هذا المشروع قيد التطوير المستمر، وأرحب بأي اقتراحات أو ملاحظات لتحسينه.

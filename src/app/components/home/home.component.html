@@ -1,1 +1,154 @@
-<p>home works!</p>
+<div class="page-content">
+  <section class="bg-primary text-gray-800 dark:text-gray-100">
+    <div class="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
+      <h2 class="text-3xl font-semibold text-center sm:text-5xl">
+        آخر المقالات
+      </h2>
+      <p class="max-w-2xl mx-auto text-center">
+        هنا تجد أحدث المقالات التي تم نشرها في المدونة. استمتع بالقراءة!
+      </p>
+    </div>
+    <div class="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
+  <a
+    *ngFor="let article of articles"
+    [routerLink]="['/article', article.id]"
+    class="card max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 bg-gray-50 dark:bg-gray-900"
+  >
+    <img
+      src="https://images.unsplash.com/photo-1754404053324-8f910c2b7e2d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8"
+      alt=""
+      class="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 bg-gray-500 dark:bg-gray-500"
+    />
+    <div class="p-6 space-y-2 lg:col-span-5">
+      <h3
+        class="text-2xl font-semibold sm:text-4xl group-hover:underline group-focus:underline"
+      >
+      {{ article.title }}
+      </h3>
+      <span class="text-xs text-gray-600 dark:text-gray-400"
+        >{{article.date}}</span
+      >
+      <p>
+        {{ article.excerpt }}
+       </p>
+    </div>
+  </a>
+      <div
+        class="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+      >
+        <a
+          rel="noopener noreferrer"
+          href="#"
+          class="card max-w-sm mx-auto group hover:no-underline focus:no-underline bg-gray-50 dark:bg-gray-900"
+        >
+          <div
+            class="absolute inset-0 bg-black/85 flex items-center justify-center z-10 rounded"
+          >
+            <span
+              class="text-white text-3xl font-bold"
+              style="backdrop-filter: blur(2px)"
+            >
+              قريباً
+            </span>
+          </div>
+          <img
+            role="presentation"
+            class="object-cover w-full rounded h-44 bg-gray-500 dark:bg-gray-500"
+            src="https://source.unsplash.com/random/480x360?1"
+          />
+          <div class="p-6 space-y-2">
+            <h3
+              class="text-2xl font-semibold group-hover:underline group-focus:underline"
+            >
+              In usu laoreet repudiare legendos
+            </h3>
+            <span class="text-xs text-gray-600 dark:text-gray-400"
+              >January 21, 2021</span
+            >
+            <p>
+              Mei ex aliquid eleifend forensibus, quo ad dicta apeirian
+              neglegentur, ex has tantas percipit perfecto. At per tempor
+              albucius perfecto, ei probatus consulatu patrioque mea, ei vocent
+              delicata indoctum pri.
+            </p>
+          </div>
+        </a>
+        <a
+          rel="noopener noreferrer"
+          href="#"
+          class="card max-w-sm mx-auto group hover:no-underline focus:no-underline bg-gray-50 dark:bg-gray-900"
+        >
+          <div
+            class="absolute inset-0 bg-black/85 flex items-center justify-center z-10 rounded"
+          >
+            <span
+              class="text-white text-3xl font-bold"
+              style="backdrop-filter: blur(2px)"
+            >
+              قريباً
+            </span>
+          </div>
+          <img
+            role="presentation"
+            class="object-cover w-full rounded h-44 bg-gray-500 dark:bg-gray-500"
+            src="https://source.unsplash.com/random/480x360?2"
+          />
+          <div class="p-6 space-y-2">
+            <h3
+              class="text-2xl font-semibold group-hover:underline group-focus:underline"
+            >
+              In usu laoreet repudiare legendos
+            </h3>
+            <span class="text-xs text-gray-600 dark:text-gray-400"
+              >January 22, 2021</span
+            >
+            <p>
+              Mei ex aliquid eleifend forensibus, quo ad dicta apeirian
+              neglegentur, ex has tantas percipit perfecto. At per tempor
+              albucius perfecto, ei probatus consulatu patrioque mea, ei vocent
+              delicata indoctum pri.
+            </p>
+          </div>
+        </a>
+        <a
+          rel="noopener noreferrer"
+          href="#"
+          class="card max-w-sm mx-auto group hover:no-underline focus:no-underline bg-gray-50 dark:bg-gray-900"
+        >
+          <div
+            class="absolute inset-0 bg-black/85 flex items-center justify-center z-10 rounded"
+          >
+            <span
+              class="text-white text-3xl font-bold"
+              style="backdrop-filter: blur(2px)"
+            >
+              قريباً
+            </span>
+          </div>
+          <img
+            role="presentation"
+            class="object-cover w-full rounded h-44 bg-gray-500 dark:bg-gray-500"
+            src="https://source.unsplash.com/random/480x360?3"
+          />
+          <div class="p-6 space-y-2">
+            <h3
+              class="text-2xl font-semibold group-hover:underline group-focus:underline"
+            >
+              In usu laoreet repudiare legendos
+            </h3>
+            <span class="text-xs text-gray-600 dark:text-gray-400"
+              >January 23, 2021</span
+            >
+            <p>
+              Mei ex aliquid eleifend forensibus, quo ad dicta apeirian
+              neglegentur, ex has tantas percipit perfecto. At per tempor
+              albucius perfecto, ei probatus consulatu patrioque mea, ei vocent
+              delicata indoctum pri.
+            </p>
+          </div>
+        </a>
+        
+      </div>
+    </div>
+  </section>
+</div>

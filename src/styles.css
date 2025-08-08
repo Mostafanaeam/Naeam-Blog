@@ -1,1 +1,249 @@
 /* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+@plugin "daisyui";
+
+:root {
+  /* Light Mode */
+  --primary-color: #7F31DA; /* Purple Heart */
+  --primary-dark: #6C1FC6; /* Purple Heart Dark Shade 01 */
+  --primary-light: #974DEE; /* Purple Heart Light Shade 01 */
+  --background-light: #85EACB; /* Algae Green Light Shade 01 */
+  --text-dark: #1e293b;
+  --text-light: #f8fafc;
+  --background-scrolled: rgba(133, 234, 203, 0.95); /* Algae Green Light Shade 01 with opacity */
+}
+
+[data-theme="dark"] {
+  /* Dark Mode */
+  --primary-color: #974DEE; /* Purple Heart Light Shade 01 */
+  --primary-dark: #7F31DA; /* Purple Heart */
+  --primary-light: #6C1FC6; /* Purple Heart Dark Shade 01 */
+  --background-light: #279D72; /* Algae Green Dark Shade 02 */
+  --text-dark: #f8fafc;
+  --text-light: #1e293b;
+  --background-scrolled: rgba(39, 157, 114, 0.95); /* Algae Green Dark Shade 02 with opacity */
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-light);
+  color: var(--text-dark);
+}
+
+/* Global styles */
+.page-content {
+  padding-top: 80px;
+}
+
+/* Add responsive padding for smaller screens */
+@media (max-width: 768px) {
+  .page-content {
+    padding-top: 60px;
+  }
+}
+
+/* Global styles for buttons and icons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+}
+
+.btn:hover {
+  color: var(--text-light);
+  transform: translateY(-2px);
+}
+
+.btn-soft {
+  background-color: var(--background-light);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.btn-soft:hover {
+  color: var(--primary-light);
+  color: var(--text-light);
+}
+
+.btn-accent {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+}
+
+.btn-accent:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Theme toggle button */
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--background-light);
+  border: 1px solid var(--primary-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  background-color: var(--primary-light);
+  border-color: var(--primary-dark);
+}
+
+.theme-toggle-btn img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Icon styles */
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: rgba(127, 49, 218, 0.1); /* Purple Heart with opacity */
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
+[data-theme="dark"] .icon {
+  background-color: rgba(151, 77, 238, 0.1); /* Purple Heart Light Shade 01 with opacity */
+}
+
+.icon:hover {
+  color: var(--primary-dark);
+}
+
+/* Social media icons */
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: rgba(127, 49, 218, 0.1); /* Purple Heart with opacity */
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+  margin: 0 0.5rem;
+}
+
+[data-theme="dark"] .social-icon {
+  background-color: rgba(151, 77, 238, 0.1); /* Purple Heart Light Shade 01 with opacity */
+}
+
+.social-icon:hover {
+  background-color: var(--primary-light);
+  color: var(--text-light);
+  transform: translateY(-2px);
+}
+
+/* Section titles */
+.section-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4rem;
+  height: 0.25rem;
+  background-color: var(--primary-color);
+  border-radius: 0.125rem;
+}
+
+/* Card styles */
+.card {
+  background-color: var(--background-light);
+  color: var(--primary-dark);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+  box-shadow: 0.3s ease;
+}
+[data-theme="dark"] .card{
+  color: var(--text-dark);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Background styles */
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.bg-primary-light {
+  background-color: var(--background-light);
+}
+
+/* Number styles */
+.number {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* Link styles */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+[data-theme="dark"] .nav-center a {
+  color: var(--text-dark);
+}
+/* Section backgrounds */
+.section-light {
+  background-color: var(--background-light);
+}
+
+.section-white {
+  background-color: var(--text-light);
+}
+
+/* Form styles */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(127, 49, 218, 0.2); /* Purple Heart with opacity */
+}
+
+[data-theme="dark"] input:focus,
+[data-theme="dark"] textarea:focus,
+[data-theme="dark"] select:focus {
+  box-shadow: 0 0 0 2px rgba(151, 77, 238, 0.2); /* Purple Heart Light Shade 01 with opacity */
+}

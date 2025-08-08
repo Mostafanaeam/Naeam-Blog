@@ -1,1 +1,47 @@
-<p>navbar works!</p>
+<nav class="navbar" [class.scrolled]="isScrolled">
+  <div class="navbar-container">
+    <a routerLink="/home" class="logo ">Naeam Blog</a>
+    <!-- Mobile menu button -->
+    <button
+      class="mobile-menu-button"
+      (click)="toggleMenu()"
+      [class.active]="isMenuOpen"
+    >
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <!-- Navigation links -->
+    <div class="navbar-links dark:bg-[rgba(39, 157, 114, 0.95)]" [class.active]="isMenuOpen">
+      <div class="nav-center dark:text-(--text-dark)">
+        <a
+          routerLink="/"
+          (click)="closeMenu()"
+          >Home</a
+        >
+        <a
+          routerLink="/Programming"
+          routerLinkActive="active"
+          (click)="closeMenu()"
+          >Programming</a
+        >
+
+        <a routerLink="/blog" routerLinkActive="active" (click)="closeMenu()"
+          >Soft Skills</a
+        >
+        <a
+          routerLink="/consultants"
+          routerLinkActive="active"
+          (click)="closeMenu()"
+          >Personal</a
+        >
+        <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()"
+          >Contact</a
+        >
+      </div>
+      <div class="w-32">
+        <app-theme-toggle></app-theme-toggle>
+      </div>
+    </div>
+  </div>
+</nav>

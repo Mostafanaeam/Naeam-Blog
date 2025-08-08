@@ -1,0 +1,19 @@
+.page-content{
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--background-light);
+  color: var(--text-dark);
+  font-family: 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  direction:rtl;
+}
+[data-theme="dark"] h1 {
+  color: white !important;
+}
+
